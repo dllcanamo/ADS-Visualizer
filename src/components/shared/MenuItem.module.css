@@ -1,0 +1,41 @@
+.menuItem {
+  height: 200px;
+  /* width: calc(100% / 4); */
+  width: 350px;
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid #abb2bf;
+  word-wrap: break-word;
+}
+
+.titleDescContainer {
+  height: calc(100% - 60px);
+  /* height: 140px; */
+  width: 100%;
+  border-bottom: 1px solid #abb2bf;
+}
+
+.goContainer {
+  height: 60px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goContainer div {
+  width: 150px;
+  height: 40px;
+  border: 1px solid #c778dd;
+  display: flex;
+  align-items: center;
+}
+
+.goContainer div:hover {
+  background-color: #c778dd;
+  cursor: pointer;
+}
+
+.goText {
+  margin: auto;
+}
