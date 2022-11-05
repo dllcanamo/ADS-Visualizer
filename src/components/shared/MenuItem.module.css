@@ -32,7 +32,7 @@
 }
 
 .goContainer div:hover {
-  background-color: #c778dd;
+  background-color: rgba(199, 120, 221, 0.2);;
   cursor: pointer;
 }
 

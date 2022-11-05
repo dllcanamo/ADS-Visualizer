@@ -1,5 +1,6 @@
 import classes from "./MainPage.module.css";
 import MainMenu from "./MainMenu";
+import BubbleSort from "./BubbleSort";
 
 const MainPage = () => {
   return (
@@ -10,7 +11,8 @@ const MainPage = () => {
       </div>
 
       <div className={classes.contentContainer}>
-        <MainMenu></MainMenu>
+        {/* <MainMenu></MainMenu> */}
+        <BubbleSort></BubbleSort>
       </div>
     </div>
   );
