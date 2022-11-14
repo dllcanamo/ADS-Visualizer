@@ -3,28 +3,36 @@ import SortDisplay from "./shared/SortDisplay";
 import SortData from "../constants/SortData";
 import classes from "./Sort.module.css";
 
-const BubbleSort = (props) => {
+const SelectionSort = (props) => {
   const [data, setData] = useState(SortData);
   const [canRandom, setCanRandom] = useState(true);
 
-  function bubbleSort() {
+  function selectionSort() {
     setCanRandom(false);
     let newArray = [...data];
-
     let fIndex = 0;
-    let sIndex = 0;
+    let sIndex = 1;
+    let iOM = 0;
 
     let interval = setInterval(() => {
-      if (newArray[sIndex].value > newArray[sIndex + 1].value) {
-        const lesser = newArray[sIndex + 1];
-        newArray[sIndex + 1] = newArray[sIndex];
-        newArray[sIndex] = lesser;
+      // console.log(fIndex, sIndex);
+      if (newArray[sIndex].value < newArray[iOM].value) {
+        iOM = sIndex;
       }
-      setNew(newArray);
       sIndex++;
-      if (sIndex >= data.length - fIndex - 1) {
+      if (sIndex >= data.length) {
+        // console.log("triggered!");
+        if (iOM !== fIndex) {
+          // console.log("switch!");
+          let lesser = newArray[iOM];
+          newArray[iOM] = newArray[fIndex];
+          newArray[fIndex] = lesser;
+        }
+        setNew(newArray);
+        // console.log(newArray);
         fIndex++;
-        sIndex = 0;
+        iOM = fIndex;
+        sIndex = fIndex + 1;
       }
       if (fIndex >= data.length - 1) {
         clearInterval(interval);
@@ -68,8 +76,8 @@ const BubbleSort = (props) => {
         <div disabled={!canRandom} onClick={shuffle}>
           <p>RANDOMIZE</p>
         </div>
-        <div onClick={bubbleSort}>
-          <p>BUBBLE SORT</p>
+        <div onClick={selectionSort}>
+          <p>SELECTION SORT</p>
         </div>
         <div onClick={triggerMenu}>
           <p>Back to Main Menu</p>
@@ -79,4 +87,4 @@ const BubbleSort = (props) => {
   );
 };
 
-export default BubbleSort;
+export default SelectionSort;

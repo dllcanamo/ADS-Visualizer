@@ -9,10 +9,51 @@
 }
 
 .titleDescContainer {
-  height: calc(100% - 60px);
-  /* height: 140px; */
+  /* height: calc(100% - 60px); */
+  height: 140px;
   width: 100%;
+  
   border-bottom: 1px solid #abb2bf;
+}
+
+.title {
+  height: 90px;
+  border-bottom: 1px solid #abb2bf;
+}
+
+.title div {
+  display: inline-block;
+  margin: 10px 15px;
+  height: 70px;
+}
+
+.title div h3 {
+  margin: auto;
+  display: inline-block;
+  line-height: 70px;
+  color: white;
+}
+
+.category {
+  height: 50px;
+  width: 100%;
+}
+
+.category div {
+  display: inline-block;
+  margin: 10px 15px;
+  height: 30px;
+}
+
+.category div p {
+  margin: auto;
+  display: inline-block;
+  line-height: 30px;
+}
+
+.catLabel {
+  color: white;
+  margin-right: 10px !important;
 }
 
 .goContainer {

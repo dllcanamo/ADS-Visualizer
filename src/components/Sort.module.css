@@ -1,0 +1,26 @@
+.remoteContainer {
+  margin: 20px;
+}
+
+.remoteContainer div {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #c778dd;
+  display: flex;
+  align-items: center;
+  margin: 5px 0px;
+}
+
+.remoteContainer div:hover {
+  background-color: rgba(199, 120, 221, 0.2);
+  cursor: pointer;
+}
+
+.remoteContainer div p {
+  margin: auto;
+}
+
+div[disabled] {
+  pointer-events: none;
+  opacity: 0.7;
+}
